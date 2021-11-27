@@ -39,11 +39,12 @@
       flex-direction: row
   .booking
     width: 340px
+    height: 210px
   .slider
     width: 100%
   .map
     width: 340px  
-
+    height: 210px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -127,4 +128,37 @@
   .hotel  
     &__slider
       margin-bottom: 20px
-   
+
+@media (min-width: 320px ) and (max-width: 480px)
+  .container
+    max-width: 280px
+  
+  .slider
+    height: 179px
+  .navbar
+    &-top
+      padding-top: 28px
+      padding-bottom: 28.58px
+
+  .hotel
+    &-right 
+      min-height: 402px
+    
+  .hotel
+    padding-top: 0
+    &__stars
+      margin-right: 16.5px
+    &-grid
+      padding-top: 18px
+    &-info
+      &__offer
+        margin-top: 5.5px
+  .logo
+    height: 13.42px
+  .map
+    height: 172px
+
+  .breadcrumb
+    &-list
+      padding-bottom: 18px 
+      padding-top: 19px
