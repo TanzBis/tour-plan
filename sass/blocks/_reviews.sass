@@ -8,6 +8,7 @@
     text-align: center
     text-transform: uppercase
     margin-bottom: 70px
+    margin-top: 0
   &-slider
     &__item
       position: relative
@@ -17,7 +18,7 @@
       background-color: #fff
       border-radius: 8px
       margin: 45px auto 0
-      width: 730px
+      max-width: 730px
       padding: 0 62px 30px 62px
       &::before
         content: ''
@@ -39,23 +40,23 @@
         background-repeat: no-repeat
     &__button
       position: absolute
-      top: 50%
+      top: 45%
       transform: translateY(-50%)
       width: 30px
       height: 30px
       background-repeat: no-repeat
       background-size: 10px
       background-position: center
-  
+      border: none
       background-color: transparent
       cursor: pointer
       z-index: 99
       &--prev
-        background-image: url(../img/arrow-prev-secondary)
-        left: 0
+        background-image: url(../img/arrow-prev-secondary.svg)
+        left: 16px
       &--next
-        background-image: url(../img/arrow-next-secondary)
-        right: 0
+        background-image: url(../img/arrow-next-secondary.svg)
+        right: 16px
     &__profile
       display: flex
       flex-direction: column
@@ -74,18 +75,23 @@
       font-size: 12px
       line-height: 15px
       color: $primary
+      margin-top: 0
       margin-bottom: 10px
     &__date
       font-style: normal
       font-weight: normal
       font-size: 10px
-      line-height: 13px
-      margin-bottom: 4px
+      line-height: 13px 
+      margin-bottom: -2.8px
     &__text
-      min-width: 537px
       font-style: normal
       font-weight: normal
       font-size: 12px
       line-height: 160%
       text-align: justify
       margin: auto
+    &__container
+      max-width: 537px
+    &__rating
+      margin-left: 3x
+      
