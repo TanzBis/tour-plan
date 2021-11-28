@@ -1,8 +1,9 @@
 @media (max-width: 1200px)
   .container 
     max-width: 960px
-  .slider
-    width: 590px
+  .hotel
+    &-slider
+      width: 590px
   .swiper
     &-slide
       &__img
@@ -10,7 +11,7 @@
         width: 100%
         object-fit: cover
 @media (max-width: 992px)
-  .container
+  .container, .newsletter-wrapper
     max-width: 700px
   .logo 
     width: 132px
@@ -34,14 +35,13 @@
     &-grid
       flex-direction: column
     &__slider
+      width: 100%
       margin-bottom: 30px
     &-right
       flex-direction: row
   .booking
     width: 340px
     height: 210px
-  .slider
-    width: 100%
   .map
     width: 340px  
     height: 210px
@@ -76,6 +76,8 @@
       flex-basis: 100% 
     &-wrapper
       justify-content: space-between
+    &__slider
+      height: 350px
     &-info
       &__text
         width: 100%
@@ -86,8 +88,6 @@
       &__offer
         order: -1
         margin-left: 0
-  .slider
-    height: 350px
   .hotel
     &-right
       flex-direction: column
@@ -96,7 +96,12 @@
     width: 100%
   .map
     width: 100%
-
+  .newsletter
+    &-wrapper
+      flex-direction: column
+      width: 92%
+      max-width: 576px
+      align-items: flex-start
 
 @media (max-width: 576px)
   .container
@@ -123,29 +128,30 @@
         width: 16px
         height: 1px
         background-color: $text-color
-  .slider
-    height: 250px
   .hotel  
     &__slider
+      height: 250px
       margin-bottom: 20px
+  .newsletter
+    padding: 76px 0 83px 0
+    &__title
+      margin-bottom: 37px
+  .subscribe
+    width: 100%
 
 @media (min-width: 320px ) and (max-width: 480px)
   .container
     max-width: 280px
-  
-  .slider
-    height: 179px
   .navbar
     &-top
       padding-top: 28px
       padding-bottom: 28.58px
-
   .hotel
     &-right 
       min-height: 402px
-    
   .hotel
     padding-top: 0
+    padding-bottom: 40px
     &__stars
       margin-right: 16.5px
     &-grid
@@ -153,6 +159,8 @@
     &-info
       &__offer
         margin-top: 5.5px
+    &__slider
+      height: 179px
   .logo
     height: 13.42px
   .map
@@ -162,3 +170,25 @@
     &-list
       padding-bottom: 18px 
       padding-top: 19px
+
+  .newsletter
+    padding: 76px 20px 83px 20px
+    &-wrapper
+      margin: 0
+    &-title
+      font-size: 20px
+      font-style: normal
+      line-height: 25px
+      &__strong
+        font-size: 30px
+        font-style: normal
+        line-height: 38px
+        margin-top: 5px
+      &__title
+        margin-bottom: 37px
+  .subscribe
+    width: 280px
+    &__input
+      padding: 19px 74px 18px 20px
+    &__button
+      font-size: 12px

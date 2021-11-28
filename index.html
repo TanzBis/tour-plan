@@ -8,8 +8,8 @@
   <title>Best Tour plan - Hotel booking</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -115,25 +115,25 @@
       </div>
       <!-- /.hotel-info -->
       <div class="hotel-grid">
-        <div class="slider hotel__slider">
-          <!-- Slider main container -->
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide"><img class="swiper-slide__img" src="img/slide-second.jpg" alt="hotel-slide">
-              </div>
-              <div class="swiper-slide"><img class="swiper-slide__img" src="img/slide-third.jpg" alt="hotel-slide">
-              </div>
-              <div class="swiper-slide"><img class="swiper-slide__img" src="img/slide.jpg" alt="hotel-slide"></div>
+        <!-- Slider main container -->
+        <div class="swiper hotel-slider hotel__slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__img" src="img/slide.jpg"
+                alt="hotel-slide">
             </div>
-            <!-- If we need navigation buttons -->
-            <button class="slider-button slider-button--prev"></button>
-            <button class="slider-button slider-button--next"></button>
+            <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__img" src="img/slide-third.jpg"
+                alt="hotel-slide">
+            </div>
+            <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__img" src="img/slide-second.jpg"
+                alt="hotel-slide"></div>
           </div>
-          <!-- /.swiper-->
+          <!-- If we need navigation buttons -->
+          <button class="hotel-slider__button hotel-slider__button--prev"></button>
+          <button class="hotel-slider__button hotel-slider__button--next"></button>
         </div>
-        <!-- /.slider-->
+        <!-- /.swiper-->
         <div class="hotel-right">
           <div class="booking">
             <div class="booking__info">
@@ -170,12 +170,9 @@
           </div>
           <!-- /.booking -->
           <div class="map">
-            <iframe
-              class="map__iframe"
+            <iframe class="map__iframe"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.6670163373474!2d44.506173215256254!3d40.17196697939438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abc563de1b3ef%3A0x58644258dc216173!2sDoubleTree%20by%20Hilton%20Hotel%20Yerevan%20City%20Centre!5e0!3m2!1sru!2sru!4v1637961299772!5m2!1sru!2sru"
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy">
+              style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
           </div>
           <!-- /.map -->
@@ -183,6 +180,60 @@
         <!-- /.hotel-right -->
       </div>
       <!-- /.hotel-grid -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <section class="newsletter">
+    <div class="newsletter-wrapper">
+      <h2 class="newsletter-title newsletter__title">
+        subscribe to our
+        <strong class="newsletter-title__strong">Newsletter</strong>
+      </h2>
+      <form action="#" class="subscribe newsletter__subscribe">
+        <input type="text" class="subscribe__input" placeholder="Your email address" />
+        <button class="subscribe__button">Send</button>
+      </form>
+    </div>
+  </section>
+  <!-- /.newsletter -->
+  <section class="reviews">
+    <div class="container">
+      <h2 class="reviews__title">What people think about us</h2>
+      <div class="swiper reviews-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="reviews-slider__item">
+              <div class="reviews-slider__profile">
+                <img src="img/reviews-avatar.jpg" alt="Photo: Megan Fox" class="reviews-slider__avatar">
+                <h3 class="reviews-slider__username">Megan Fox</h3>
+                <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
+                <div class="reviews-slider__rating">
+                  <img class="stars__star" src="img/star.svg" alt="star">
+                  <img class="stars__star" src="img/star.svg" alt="star">
+                  <img class="stars__star" src="img/star.svg" alt="star">
+                  <img class="stars__star" src="img/star.svg" alt="star">
+                  <img class="stars__star" src="img/star.svg" alt="star">
+                </div>
+                <!-- /.reviews-star-->
+              </div>
+              <!-- /.reviews-slider__profile -->
+              <p class="reviews-slider__text">
+                It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well.
+                Issue was only that Lift was not in working and we were allotted to 3rd floor and amenities articles were
+                in corner of gallery which were giving bad feeling. Breakfast was good and support of the staff was also
+                very nice. Location is not good as per atmosphere, it is very nearby most of the popular places but self
+                location in a narrow street is not good. Overall it was a good experience and could recommend.
+              </p>
+            </div>
+            <!-- /.reviews-slider__item-->
+          </div>
+          <!-- /.swiper-slide-->
+        </div>
+        <!-- /.swiper-wrapper-->
+        <button class="reviews-slider__button reviews-slider__button--prev"></button>
+        <button class="reviews-slider__button reviews-slider__button--next"></button>
+      </div>
+      <!-- /.reviews-slider-->
     </div>
     <!-- /.container -->
   </section>
