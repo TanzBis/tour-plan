@@ -13,11 +13,6 @@ const hotelSlider = new Swiper('.hotel-slider', {
 });
 
 const reviewsSlider = new Swiper('.reviews-slider', {
-  // Optional parameters
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
   loop: true,
   // Navigation arrows
   navigation: {
