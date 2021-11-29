@@ -37,11 +37,20 @@
     &__name
       margin-right: 0
   .hotel
+    padding-top: 0
     padding-bottom: 60px
     &-info
+      padding-top: 24px
       padding-bottom: 20px
+      &__description
+        margin: 0
+      &__name
+        margin-top: 0
       &__offer
         margin-left: 13.8px
+        margin-bottom: 3px
+      &__rating
+        margin-bottom: 5px
     &-grid
       flex-direction: column
     &__slider
@@ -50,19 +59,35 @@
     &-right
       flex-direction: row
     &__stars
-      display: block
+      margin-left: 3.5px
+  .breadcrumb
+    &-list
+      padding-top: 19px
+  .stars
+    display: flex
+    align-items: flex-end
+    &__star
+      margin-right: 3px
+      margin-bottom: 5px
   .booking
     width: 340px
     height: 210px
   .map
     width: 340px  
     height: 210px
+  .newsletter
+    &-wrapper
+      align-items: flex-start
   .reviews
     padding-bottom: 60px  
+    &__star
+      margin-right: 3px
     &__title
       font-size: 30px
-      margin-bottom: 50px
+      margin-bottom: 43px
     &-slider
+      &__rating
+        display: flex
       &__item
         max-width: 580px
         padding: 0 60px 30px 64px
@@ -70,19 +95,28 @@
           display: none
     &-slider
       &__button
-        top: 47%
+        top: 50%
         &--prev
           left: 0
         &--next
           right: 0
+      &__date
+        margin-bottom: 5px
+      &__item
+        margin-top: 49px
+      &__profile
+        margin-bottom: 32px
+        margin-top: -49px
   .activities
     padding: 60px 0 70px 0
     &__card
       margin-bottom: 20px
   .card
     width: 340px
-    height: 250px
-
+    height: 255px
+    &__title
+      margin-top: 119px
+      max-width: 200px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -110,6 +144,7 @@
   .stars
     flex-basis: auto
   .hotel
+    padding-top: 50px 
     &-name
       flex-basis: 100% 
     &-wrapper
@@ -218,8 +253,8 @@
     max-width: 280px
   .navbar
     &-top
-      padding-top: 28px
-      padding-bottom: 28.58px
+      padding-top: 29px
+      padding-bottom: 29px
   .hotel
     &-right 
       min-height: 402px
@@ -227,16 +262,21 @@
     padding-top: 0
     padding-bottom: 40px
     &__stars
-      margin-right: 16.5px
+      margin-right: 16px
     &-grid
       padding-top: 18px
     &-info
+      padding-top: 5px
+      padding-bottom: 20px
+      &__name
+        margin: 0
       &__offer
-        margin-top: 5.5px
+        margin-top: 0
+        margin-bottom: 10px
     &__slider
       height: 179px
   .logo
-    height: 13.42px
+    display: flex
   .map
     height: 172px
 
@@ -272,20 +312,25 @@
     &__title
       font-size: 18px
       max-width: 245px
-      margin: auto 40px 40px
+      margin: auto 40px 42px
       line-height: 23px
     &-slider
+      &__item
+        padding-bottom: 36px
+      &__profile
+        margin-bottom: 33px 
       &__container
         max-width: 219px
       &__text
         text-align: left
       &__button
-        top: 47%
+        top: 6%
         &--prev
-          left: 0
+          left: 115px
         &--next
-          right: 0
+          right: 115px
   .activities
+    padding-top: 40px
     padding-bottom: 60px
     &__first
       order: 1
@@ -293,11 +338,12 @@
       order: 3
     &__third
       order: 2
+      margin-bottom: 28px
     &__four
       order: 4
-      margin-bottom: 36px
       font-size: 18px      
       line-height: 23px
+      margin-bottom: 0
     &__title
       font-weight: bold
       font-size: 18px

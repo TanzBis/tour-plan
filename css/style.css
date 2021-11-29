@@ -1230,13 +1230,25 @@ img {
     margin-right: 0;
   }
   .hotel {
+    padding-top: 0;
     padding-bottom: 60px;
   }
   .hotel-info {
+    padding-top: 24px;
     padding-bottom: 20px;
+  }
+  .hotel-info__description {
+    margin: 0;
+  }
+  .hotel-info__name {
+    margin-top: 0;
   }
   .hotel-info__offer {
     margin-left: 13.8px;
+    margin-bottom: 3px;
+  }
+  .hotel-info__rating {
+    margin-bottom: 5px;
   }
   .hotel-grid {
     -webkit-box-orient: vertical;
@@ -1255,7 +1267,22 @@ img {
             flex-direction: row;
   }
   .hotel__stars {
-    display: block;
+    margin-left: 3.5px;
+  }
+  .breadcrumb-list {
+    padding-top: 19px;
+  }
+  .stars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .stars__star {
+    margin-right: 3px;
+    margin-bottom: 5px;
   }
   .booking {
     width: 340px;
@@ -1265,12 +1292,25 @@ img {
     width: 340px;
     height: 210px;
   }
+  .newsletter-wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
   .reviews {
     padding-bottom: 60px;
   }
+  .reviews__star {
+    margin-right: 3px;
+  }
   .reviews__title {
     font-size: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 43px;
+  }
+  .reviews-slider__rating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .reviews-slider__item {
     max-width: 580px;
@@ -1280,13 +1320,23 @@ img {
     display: none;
   }
   .reviews-slider__button {
-    top: 47%;
+    top: 50%;
   }
   .reviews-slider__button--prev {
     left: 0;
   }
   .reviews-slider__button--next {
     right: 0;
+  }
+  .reviews-slider__date {
+    margin-bottom: 5px;
+  }
+  .reviews-slider__item {
+    margin-top: 49px;
+  }
+  .reviews-slider__profile {
+    margin-bottom: 32px;
+    margin-top: -49px;
   }
   .activities {
     padding: 60px 0 70px 0;
@@ -1296,7 +1346,11 @@ img {
   }
   .card {
     width: 340px;
-    height: 250px;
+    height: 255px;
+  }
+  .card__title {
+    margin-top: 119px;
+    max-width: 200px;
   }
 }
 
@@ -1340,6 +1394,9 @@ img {
   .stars {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
+  }
+  .hotel {
+    padding-top: 50px;
   }
   .hotel-name {
     -ms-flex-preferred-size: 100%;
@@ -1500,8 +1557,8 @@ img {
     max-width: 280px;
   }
   .navbar-top {
-    padding-top: 28px;
-    padding-bottom: 28.58px;
+    padding-top: 29px;
+    padding-bottom: 29px;
   }
   .hotel-right {
     min-height: 402px;
@@ -1511,19 +1568,29 @@ img {
     padding-bottom: 40px;
   }
   .hotel__stars {
-    margin-right: 16.5px;
+    margin-right: 16px;
   }
   .hotel-grid {
     padding-top: 18px;
   }
+  .hotel-info {
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+  .hotel-info__name {
+    margin: 0;
+  }
   .hotel-info__offer {
-    margin-top: 5.5px;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
   .hotel__slider {
     height: 179px;
   }
   .logo {
-    height: 13.42px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .map {
     height: 172px;
@@ -1567,8 +1634,14 @@ img {
   .reviews__title {
     font-size: 18px;
     max-width: 245px;
-    margin: auto 40px 40px;
+    margin: auto 40px 42px;
     line-height: 23px;
+  }
+  .reviews-slider__item {
+    padding-bottom: 36px;
+  }
+  .reviews-slider__profile {
+    margin-bottom: 33px;
   }
   .reviews-slider__container {
     max-width: 219px;
@@ -1577,15 +1650,16 @@ img {
     text-align: left;
   }
   .reviews-slider__button {
-    top: 47%;
+    top: 6%;
   }
   .reviews-slider__button--prev {
-    left: 0;
+    left: 115px;
   }
   .reviews-slider__button--next {
-    right: 0;
+    right: 115px;
   }
   .activities {
+    padding-top: 40px;
     padding-bottom: 60px;
   }
   .activities__first {
@@ -1602,14 +1676,15 @@ img {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    margin-bottom: 28px;
   }
   .activities__four {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
-    margin-bottom: 36px;
     font-size: 18px;
     line-height: 23px;
+    margin-bottom: 0;
   }
   .activities__title {
     font-weight: bold;
