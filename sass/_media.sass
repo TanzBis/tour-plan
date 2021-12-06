@@ -1,5 +1,5 @@
 @media (max-width: 1200px)
-  .container 
+  .container
     max-width: 960px
   .hotel
     &-slider
@@ -13,15 +13,18 @@
   .card
     width: 230px
     height: 230px
+  .footer
+    &__input
+      flex-basis: 100%
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
-  .logo 
+  .logo
     width: 132px
   .navbar
     &-top
       padding: 30px 0 30px 0
-    &__search 
+    &__search
       margin-left: auto
     &-menu
       padding: 20px 12.9px 22px 15px
@@ -73,13 +76,13 @@
     width: 340px
     height: 210px
   .map
-    width: 340px  
+    width: 340px
     height: 210px
   .newsletter
     &-wrapper
       align-items: flex-start
   .reviews
-    padding-bottom: 60px  
+    padding-bottom: 60px
     &__star
       margin-right: 3px
     &__title
@@ -108,7 +111,7 @@
         margin-bottom: 32px
         margin-top: -49px
   .activities
-    padding: 60px 0 70px 0
+    padding: 60px 0 50px 0
     &__card
       margin-bottom: 20px
   .card
@@ -117,6 +120,44 @@
     &__title
       margin-top: 119px
       max-width: 200px
+  .footer
+    padding: 73px 0 33px 0
+    &-wrapper
+      grid-template-columns: repeat(12, 1fr)
+      grid-gap: 20px
+    &__input
+      flex-basis: 48%
+    &__logo
+      grid-row: 1/2
+      grid-column: span 2
+      margin-bottom: 18px
+    &__social
+      &-network
+        grid-row: 1/2
+        grid-column: 4/10
+        align-self: center
+    &__categories
+      grid-row: 2/3
+      grid-column: 1/4
+      margin-left: 3px
+    &__legal
+      grid-column: span 4
+      grid-row: 2/3
+    &__contact
+      &-details
+        grid-row: 3
+        grid-column: span 9
+      &-form
+        grid-row: 4
+        grid-column: span 5
+    &__additional
+      grid-column: 4/9
+      grid-row: 2/3
+      margin-left: 28px
+    &__message
+      width: 539px
+  
+  
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -124,11 +165,12 @@
   .navbar
     &__search, &-menu, &__user
       display: none
+
   .menu
     &-button
       display: flex
       width: 16px
-      height: 11px 
+      height: 11px
       padding: 0
       align-items: center
       justify-content: center
@@ -144,9 +186,9 @@
   .stars
     flex-basis: auto
   .hotel
-    padding-top: 50px 
+    padding-top: 50px
     &-name
-      flex-basis: 100% 
+      flex-basis: 100%
     &-wrapper
       justify-content: space-between
     &__slider
@@ -192,12 +234,12 @@
           transform: translate(-50%, 0)
         &--next
           right: 50%
-          margin-right: -65px 
+          margin-right: -65px
           transform: translate(50%, 0)
       &__container
         max-width: 455px
   .activities
-      padding: 60px 0 70px 0
+    padding: 60px 0 70px 0
   .card
     width: 49%
     height: 255px
@@ -206,6 +248,12 @@
       font-weight: bold
       font-size: 16px
       line-height: 20px
+    .footer
+      padding: 73px 0 33px 0
+      &__input
+        flex-basis: 100%
+    
+    
 @media (max-width: 576px)
   .container
     max-width: 480px
@@ -218,7 +266,7 @@
     &-button
       display: flex
       width: 16px
-      height: 11px 
+      height: 11px
       padding: 0
       align-items: center
       justify-content: center
@@ -231,10 +279,10 @@
         width: 16px
         height: 1px
         background-color: $text-color
-  .hotel  
+  .hotel
     &__slider
-      height: 250px 
-      margin-bottom: 20px 
+      height: 250px
+      margin-bottom: 20px
   .newsletter
     padding: 76px 0 83px 0
     &__title
@@ -247,6 +295,32 @@
         max-width: 455px
   .card
     width: 100%
+  .footer
+    &-wrapper
+      grid-template-columns: 1fr
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+    &__additional
+      grid-row: 3
+      grid-column: 1
+    &__categories
+      grid-row: 4
+      grid-column: 1 
+    &__legal
+      grid-row: 5
+      grid-column: 1
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1
 
 @media (min-width: 320px ) and (max-width: 480px)
   .container
@@ -256,7 +330,7 @@
       padding-top: 29px
       padding-bottom: 29px
   .hotel
-    &-right 
+    &-right
       min-height: 402px
   .hotel
     padding-top: 0
@@ -282,7 +356,7 @@
 
   .breadcrumb
     &-list
-      padding-bottom: 18px 
+      padding-bottom: 18px
       padding-top: 19px
 
   .newsletter
@@ -318,7 +392,7 @@
       &__item
         padding-bottom: 36px
       &__profile
-        margin-bottom: 33px 
+        margin-bottom: 33px
       &__container
         max-width: 219px
       &__text
@@ -341,7 +415,7 @@
       margin-bottom: 28px
     &__four
       order: 4
-      font-size: 18px      
+      font-size: 18px
       line-height: 23px
       margin-bottom: 0
     &__title
@@ -352,3 +426,8 @@
   .card
     width: 100%
     height: 255px
+  .footer
+    &__message
+      width: 281px
+    &__input
+      flex-basis: 100%
