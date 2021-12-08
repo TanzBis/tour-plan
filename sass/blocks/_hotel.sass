@@ -1,23 +1,21 @@
 .hotel
-  padding-top: 15px
   padding-bottom: 70px
   &-info
+    padding-top: 23px
+    padding-bottom: 20px
     display: flex
     align-items: center
     justify-content: space-between
-    padding-bottom: 19px
     &__offer
-      margin-left: 12.5px
-      margin-top: 4px
+      margin-left: 14px
+      margin-top: 1px
     &__name
-      margin-top: 4px
-      margin-bottom: 0
+      margin: 0
       text-transform: uppercase
     &__description
-      margin: 0 0 0.8px 0
-    &__rating
-      margin-top: 5px
-      margin-right: 0.5px
+      margin: 0
+  &__stars
+    margin-bottom: 4px
   &-name
     font-size: 24px
     line-height: 30px
@@ -28,7 +26,7 @@
   &-description
     font-style: normal
     font-weight: normal
-    font-size: 11.86px
+    font-size: 12px
     line-height: 15px
   &-slider
     width: 728px
@@ -49,7 +47,7 @@
         right: 0
         left: 0
         bottom: 0
-        background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
+        background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
         z-index: 1
     &__img
       width: 100%
@@ -64,7 +62,7 @@
       width: 30px
       height: 30px
       border: none
-      background-color: transparent 
+      background-color: transparent
       cursor: pointer
       background-repeat: no-repeat
       background-position: center
@@ -83,18 +81,21 @@
     flex-direction: column
     justify-content: space-between
 
-  
 .stars
+  display: flex
   flex-basis: 100%
   &__star
-    
+    margin-right: 2px
+
 .offer
-  font-size: 10px
-  line-height: 13px
-  padding: 4px 9.4px
+  padding: 3px 9px 4px 9px
   background-color: $primary
   border-radius: 3px
+  font-size: 10px
+  font-weight: 600
+  line-height: 13px
   color: $light
+
 .rating
   max-width: 65px
   min-height: 45px
@@ -102,7 +103,6 @@
   color: $light
   background-color: $primary
   border-radius: 4px
-  cursor: pointer
   &__text
     font-size: 8.6px
     line-height: 10px
@@ -114,12 +114,12 @@
   border-radius: 8px
   width: 350px
   min-height: 210px
-  padding: 29px 29px 23px 26px
-  background-color: $dark 
+  padding: 29px 29px 26px 26px
+  background-color: $dark
   color: $light
   &__info
     display: flex
-    justify-content: space-between 
+    justify-content: space-between
     margin-bottom: 9px
   &__price
     display: flex
@@ -134,19 +134,19 @@
     font-style: normal
     font-weight: 800
     font-size: 24px
-    line-height: 33px
+    line-height: 31px
   &__per-room
     font-style: normal
     font-weight: normal
     font-size: 12px
-    line-height: 16px
+    line-height: 14px
   &__room
     margin-top: 4px
 
   &__text
     margin-bottom: 8px
     font-family: Nunito
-    font-style: normal 
+    font-style: normal
     font-weight: normal
     font-size: 12px
     line-height: 16px
@@ -166,7 +166,7 @@
     font-weight: 600
     font-size: 18px
     line-height: 25px
-    
+
   &__number
     display: flex
     align-items: center
@@ -181,6 +181,7 @@
   &__num
     margin-left: 8px
   &__button
+    padding: 13px 80px
     font-weight: 600
     font-size: 14px
     line-height: 19px
@@ -191,7 +192,6 @@
     border: none
     color: $light
     cursor: pointer
-    
 
 .map
   width: 347px
