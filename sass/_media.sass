@@ -13,9 +13,6 @@
   .card
     width: 230px
     height: 230px
-  .footer
-    &__input
-      flex-basis: 100%
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -58,6 +55,8 @@
     padding: 29px 22px 26px 23px
     width: 340px
     height: 210px
+    &__button
+      padding: 13px 13px
   .map
     width: 340px
     height: 210px
@@ -104,55 +103,62 @@
       margin-top: 119px
       max-width: 200px
   .footer
-    padding: 73px 0 33px 0
+    padding-top: 73px
+    padding-bottom: 33px
     &-wrapper
       grid-template-columns: repeat(12, 1fr)
-      grid-gap: 20px
-    &__input
-      flex-basis: 48%
+      grid-row-gap: 20px
+    &__title
+      &-categories, &-additional, &-legal
+        margin-top: 30px
+      &-message
+        margin-bottom: 35px
     &__logo
-      margin-top: 0
       width: 98px
       height: 109px
+      margin-top: 0
       grid-row: 1 / 2
       grid-column: 1 / 4
     &__social
       &-network
         margin-top: 11px
-        grid-row: 1/2
-        grid-column: 4/12
+        grid-row: 1 / 2
+        grid-column: 4 / 12
         align-self: center
     &__categories
-      grid-row: 2/3
-      grid-column: 1/5
-      margin-left: 3px
+      grid-row: 2 / 3
+      grid-column: 1 / 4
+    &__additional
+      grid-row: 2 / 3
+      grid-column: 4 / 9
+      justify-self: center
     &__legal
       margin: 0 0 0 8px
-      grid-column: span 4
-      grid-row: 2/3
       justify-self: center
+      grid-column: span 4
     &__contact
       &-details
         margin: 23px 0 0 0
         grid-column: span 10
         grid-row: 3
       &-form
+        margin: 0
+        margin-top: 20px
+        grid-column: span 11
         grid-row: 4
-        grid-column: span 5
-    &__additional
-      grid-column: 4/9
-      grid-row: 2/3
-      justify-self: center
-    &__title
-      &-categories, &-additional, &-legal
-        margin-top: 30px
-    &__message
-      width: 539px
-    &__form
-      width: 539px
-      margin-bottom: 56px
+        max-width: 540px
     &__text
-      margin-top: 0
+      margin-bottom: 21px
+    &__bottom
+      grid-column: span 12
+      margin: 41px 0 0 0
+      padding: 0
+    &__link
+      &:hover
+        border-bottom: none
+    &__button
+      &:hover
+        background-color: $primary
   .modal
     &__dialog
       padding-right: 40px
@@ -293,14 +299,6 @@
       font-weight: bold
       font-size: 16px
       line-height: 20px
-  .footer
-    padding: 73px 0 33px 0
-    &__input
-      flex-basis: 100%
-    &__additional
-      margin-left: 0
-    &__ul
-      width: 493px
   .modal
     &__dialog
       width: 70%
@@ -349,6 +347,16 @@
   .card
     width: 100%
   .footer
+    padding-top: 69px
+    padding-bottom: 21px
+    &__title
+      &-social
+        flex-basis: 100%
+        margin: 21px 0
+      &-legal,&-additional, &-categories
+        margin-top: 9px
+      &-message
+        margin-bottom: 17px
     &-wrapper
       grid-template-columns: 1fr
     &__logo
@@ -356,27 +364,56 @@
       grid-column: 1
     &__social
       &-network
+        margin: 0
         grid-row: 2
         grid-column: 1
-    &__additional
+        flex-wrap: wrap
+    &__legal
+      margin: 0
       grid-row: 3
       grid-column: 1
-    &__categories
+      justify-self: start
+    &__additional
+      margin: 0
       grid-row: 4
       grid-column: 1
-    &__legal
+      justify-self: start
+    &__categories
+      margin: 0
       grid-row: 5
       grid-column: 1
     &__contact
       &-details
         grid-row: 6
         grid-column: 1
-        width: 250px
       &-form
+        margin-bottom: 9px
         grid-row: 7
         grid-column: 1
-    &__ul
-      width: 250px
+    &__icon-wrapper
+      min-width: 30px
+    &__contact-ul
+      margin: 0
+    &__input
+      &-group
+        width: 100%
+    &__info
+      flex-basis: 100%
+      margin-bottom: 15px
+    &__button
+      order: 1
+    &__bottom
+      margin: 0
+      grid-row: 8 / 9
+      flex-wrap: wrap
+      grid-column: 1
+      &-ul
+        margin-bottom: 15px
+      &-item
+        margin-right: 7px
+    &__form
+      &-bottom
+        margin-top: 15px
 
 @media (max-width: 480px)
   .container
@@ -484,11 +521,6 @@
   .card
     width: 100%
     height: 255px
-  .footer
-    &__form
-      width: 281px
-    &__input
-      flex-basis: 100%
   .modal
     &__dialog
       width: 90%
