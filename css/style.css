@@ -363,6 +363,35 @@ img {
      object-fit: cover;
 }
 
+.input {
+  background-color: #ffff;
+  border-radius: 4px;
+  border: none;
+  padding: 0 23px;
+  height: 50px;
+}
+
+.message {
+  border-color: #ffff;
+  border-radius: 4px;
+  padding: 18px 23px;
+  border: none;
+}
+
+.button {
+  min-width: 160px;
+  min-height: 50px;
+  padding: 18px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffff;
+  background-color: #EC1F46;
+  border: none;
+  border-radius: 4px;
+}
+
 .navbar {
   background-color: #fff;
 }
@@ -416,6 +445,10 @@ img {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+}
+
+.navbar-menu__item--mobile_visible {
+  display: none;
 }
 
 .logo {
@@ -1347,30 +1380,12 @@ img {
 }
 
 .footer__message {
-  border-color: #ffff;
-  border-radius: 4px;
-  padding: 18px 23px;
-  border: none;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: 23px;
   resize: none;
-  width: 539px;
+  max-width: 539px;
   height: 123px;
-}
-
-.footer__button {
-  min-width: 160px;
-  min-height: 50px;
-  padding: 18px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: #ffff;
-  background-color: #EC1F46;
-  border: none;
-  border-radius: 4px;
 }
 
 .footer-card {
@@ -1398,6 +1413,99 @@ img {
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
+}
+
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 143, 223, 0.39);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.modal__overlay--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 33px 88px;
+  background-color: #0A223D;
+  border-radius: 8px;
+  color: #ffff;
+  max-width: 478px;
+  z-index: 101;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.modal__dialog--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__close {
+  position: absolute;
+  right: 18px;
+  top: 17px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.modal__message {
+  width: 100%;
+  height: 123px;
+  margin-bottom: 15px;
+}
+
+.modal__info {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #E0E0E0;
+}
+
+.modal__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 1200px) {
@@ -1610,8 +1718,8 @@ img {
     -ms-grid-row-span: 1;
     grid-row: 2/3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1/4;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
     margin-left: 3px;
   }
   .footer__legal {
@@ -1642,6 +1750,13 @@ img {
   .footer__message {
     width: 539px;
   }
+  .footer__form {
+    width: 539px;
+    margin-bottom: 56px;
+  }
+  .footer__text {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1649,8 +1764,56 @@ img {
     max-width: 576px;
     width: 92%;
   }
-  .navbar__search, .navbar-menu, .navbar__user {
+  body {
+    padding-top: 78px;
+  }
+  .navbar--mobile_fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .navbar__search--mobile_hidden, .navbar__user--mobile_hidden {
     display: none;
+  }
+  .navbar__search--mobile_visible, .navbar__user--mobile_visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar__user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar-bottom {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 78px;
+    padding-top: 30px;
+  }
+  .navbar-bottom--visible {
+    display: block;
+  }
+  .navbar-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar-menu__item {
+    margin-bottom: 20px;
+  }
+  .navbar-menu__item--mobile_visible {
+    display: block;
   }
   .menu-button {
     display: -webkit-box;
@@ -1681,12 +1844,14 @@ img {
     height: 1px;
     background-color: #333333;
   }
+  .user__name--light {
+    color: #ffff;
+    margin-left: 0;
+    margin-top: 10px;
+  }
   .stars {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
-  }
-  .hotel {
-    padding-top: 50px;
   }
   .hotel-name {
     -ms-flex-preferred-size: 100%;
@@ -1780,12 +1945,18 @@ img {
     font-size: 16px;
     line-height: 20px;
   }
-  .card .footer {
+  .footer {
     padding: 73px 0 33px 0;
   }
-  .card .footer__input {
+  .footer__input {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+  .footer__additional {
+    margin-left: 0;
+  }
+  .footer__ul {
+    width: 493px;
   }
 }
 
@@ -1827,6 +1998,9 @@ img {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .hotel {
+    padding-top: 50px;
   }
   .hotel__slider {
     height: 250px;
@@ -1886,6 +2060,7 @@ img {
     grid-row: 6;
     -ms-grid-column: 1;
     grid-column: 1;
+    width: 250px;
   }
   .footer__contact-form {
     -ms-grid-row: 7;
@@ -1893,11 +2068,17 @@ img {
     -ms-grid-column: 1;
     grid-column: 1;
   }
+  .footer__ul {
+    width: 250px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .container {
     max-width: 280px;
+  }
+  body {
+    padding-top: 69px;
   }
   .navbar-top {
     padding-top: 29px;
@@ -2039,7 +2220,7 @@ img {
     width: 100%;
     height: 255px;
   }
-  .footer__message {
+  .footer__form {
     width: 281px;
   }
   .footer__input {
