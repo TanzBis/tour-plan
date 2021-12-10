@@ -21,6 +21,7 @@
     align-items: center
     justify-content: space-between
     color: $light
+        
     &__link
       color: inherit
       text-decoration: none
@@ -94,3 +95,10 @@
     &__link
       text-decoration: none
       color: $dark
+@keyframes moveRight
+  from 
+    transform: translateX(0)
+  50%
+    transform: translateX(200px)
+  to
+    transform: translateX(100px)
