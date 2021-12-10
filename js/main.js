@@ -50,25 +50,15 @@ $(document).ready(function () {
   $(".form").each(function () {
     $(this).validate({
       errorClass: "invalid",
-
-      rules: {
+      "rules": {
         name: {
-          required: true,
-          minlenght: 2,
-        },
-        phone: {
-          required: true,
-          phone: true,
-        },
-        email: {
-          required: true,
-          email: true,
+          minlength: 2
         },
       },
-      messages: {
+      "messages": {
         name: {
           required: "Name is required",
-          minlenght: "Name must not be shorter than 2 letters"
+          minlength: "Name must not be shorter than 2 letters"
         },
         email: {
           required: "We need tour email to contact you",
