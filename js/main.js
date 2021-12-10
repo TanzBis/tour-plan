@@ -46,5 +46,28 @@ $(document).ready(function () {
     modalOverlay.removeClass("modal__overlay--visible")
     modalDialog.removeClass("modal__dialog--visible")
   }
-
+  // Обработка форм
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      rules: {
+        name: {
+          minlenght: 2,
+        },
+      },
+      messages: {
+        name: {
+          required: "Name is required",
+          minlenght: "Name must not be shorter than two letters"
+        },
+        email: {
+          required: "We need tour email to contact you",
+          email: "Your email must be format name@domain.com"
+        },
+        phone: {
+          required: "Phone number is required",
+        }
+      },
+    });
+  })
 });
