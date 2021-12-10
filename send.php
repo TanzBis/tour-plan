@@ -5,18 +5,39 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
+
+// Для формы в футере сайта
 $name = $_POST['name'];
 $phone = $_POST['phone'];
+$email = $_POST['email'];
 $message = $_POST['message'];
-
-// Формирование самого письма
-$title = "Новое обращение Best tour plan ";
-$body = "
-<h2>Новое письмо</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
+if (!empty($email)) {
+    $title = "New appeal Best Tour Plan";
+    $body = "
+    <h2>New appeal</h2>
+    <b>Name:</b> $name<br>
+    <b>Phone:</b> $phone<br><br>
+    <b>Email:</b> $email<br><br>
+    <b>Message:</b><br>$message
+    ";
+} elseif(!empty($name)) {
+  $title = "New appeal Best Tour Plan";
+  $body = "
+  <h2>New appeal</h2>
+  <b>Name:</b> $name<br>
+  <b>Phone:</b> $phone<br><br>
+  <b>Message:</b><br>$message
+  ";
+}
+else {
+    $emailNewsletter = $_POST['newsletterEmail'];
+    $title = "New Subscriber for You";
+    $body = "
+    <h2>New Subscriber!</h2>
+    <strong>His Email: </strong> $emailNewsletter<br><br>
+    <strong>Congratulations!!!</strong>
+    ";
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -36,7 +57,7 @@ try {
     $mail->setFrom('tanzilabisultanova4', 'Tanzila'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('viskhan11@gmail.com');  
+    $mail->addAddress('tanzbis81@gmail.com');  
 
     // Прикрипление файлов к письму
     // Отправка сообщения

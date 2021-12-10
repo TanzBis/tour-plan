@@ -13,12 +13,14 @@ img
   max-width: 100%
   object-fit: cover
 
-button
-	&:hover
-    border: 1px solid gold
 a
+  transition: color 400ms ease
   &:hover
-    border: 1px solid gold
+    color: gold
+button 
+  transition: background-color 400ms ease
+  &:hover
+    background-color: darken($primary, 10%)
 
 .input
   background-color: $light

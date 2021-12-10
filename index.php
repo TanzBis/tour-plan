@@ -33,7 +33,7 @@
               Half-Board / All Inclusive + Complimentary Activities + Child
               Stays Free
             </p>
-          </div>
+          </div> 
           <!-- /.hotel-info__text -->
           <div class="rating hotel-info__rating">
             <span class="rating__text">User Rattings</span>
@@ -147,9 +147,10 @@
           subscribe to our
           <strong class="newsletter-title__strong">Newsletter</strong>
         </h2>
-        <form action="#" class="subscribe newsletter__subscribe">
+        <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
           <input
-            type="text"
+            type="email"
+            name="newsletterEmail"
             class="subscribe__input"
             placeholder="Your email address"
           />

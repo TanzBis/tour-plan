@@ -18,9 +18,9 @@
     max-width: 700px
   .logo
     width: 132px
-  a, button
+  button
     &:hover
-      border: none
+      background-color: $primary
   .navbar
     &-top
       padding: 30px 0 30px 0
@@ -31,6 +31,8 @@
       &__link
         font-size: 12px
         line-height: 15px
+        &:hover
+          color: #fff
     &__search
       margin-left: 49px
   .search
@@ -39,6 +41,8 @@
   .user
     &__name
       margin-right: 0
+      &:hover
+        color: #333
   .breadcrumb
     &-list
       padding-top: 19px
@@ -56,6 +60,9 @@
       margin-left: 3.5px
   .hotel
     &-info
+      &__rating
+        &:hover
+          border: none
       &__description
         &:hover
           border: none
@@ -64,6 +71,9 @@
       &__item
         &:hover
           border: none
+  .rating
+    &:hover
+      border: none
   .booking
     padding: 29px 22px 26px 23px
     width: 340px
@@ -168,7 +178,7 @@
       padding: 0
     &__link
       &:hover
-        border-bottom: none
+        color: #BDBDBD
     &__button
       &:hover
         background-color: $primary
