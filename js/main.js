@@ -54,6 +54,9 @@ $(document).ready(function () {
         name: {
           minlength: 2
         },
+        phone: {
+          minlength: 16
+        }
       },
       "messages": {
         name: {
@@ -66,6 +69,7 @@ $(document).ready(function () {
         },
         phone: {
           required: "Phone number is required",
+          minlength: "Phone number must be have 11 number"
         }
       },
     });

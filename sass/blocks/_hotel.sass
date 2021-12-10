@@ -9,11 +9,15 @@
     &__offer
       margin-left: 14px
       margin-top: 1px
+      cursor: pointer
     &__name
       margin: 0
       text-transform: uppercase
     &__description
       margin: 0
+      &:hover
+        border: 1px solid gold
+        cursor: pointer
   &__stars
     margin-bottom: 4px
   &-name
@@ -103,6 +107,9 @@
   color: $light
   background-color: $primary
   border-radius: 4px
+  cursor: pointer
+  &:hover
+    border: 1px solid gold
   &__text
     font-size: 8px
     line-height: 10px
