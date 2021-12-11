@@ -37,7 +37,7 @@
           <!-- /.hotel-info__text -->
           <div class="rating hotel-info__rating">
             <span class="rating__text">User Rattings</span>
-            <span class="rating__counter">4.5/5</span>
+            <span class="rating__counter">4.5/<span class="rating__small-number">5</span></span>
           </div>
           <!-- /.hotel-info__rating -->
         </div>
@@ -147,7 +147,7 @@
           subscribe to our
           <strong class="newsletter-title__strong">Newsletter</strong>
         </h2>
-        <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
+        <form action="#" method="POST" class="subscribe newsletter__subscribe">
           <input
             type="email"
             name="newsletterEmail"
